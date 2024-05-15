@@ -1,10 +1,12 @@
-import { Banner, Button } from "@telegram-apps/telegram-ui"
+import { Banner, Button, Text } from "@telegram-apps/telegram-ui"
+import Back from "../helpers/back"
 
 const Item = ()=> {
     return (
         <div className="item__page">
+            
             <img src="https://i.imgur.com/892vhef.jpeg" className="item__page__image"/>
-            <div className="item__page__title">NFT Name</div>
+            <Text className="item__page__title">NFT Name</Text>
             <div className="item__page__info">
                 <Banner
                     header="1 TON"

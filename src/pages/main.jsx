@@ -1,14 +1,16 @@
-import { Button, Card } from "@telegram-apps/telegram-ui"
+import { Button, Card, Text } from "@telegram-apps/telegram-ui"
 import { CardCell } from "@telegram-apps/telegram-ui/dist/components/Blocks/Card/components/CardCell/CardCell"
 import { CardChip } from "@telegram-apps/telegram-ui/dist/components/Blocks/Card/components/CardChip/CardChip"
 import React from "react"
+import { useNavigate } from "react-router-dom"
 
 
 const Main = () => {
+    const nav = useNavigate()
     return (
         <div className="main__page">
             <div className="main__page__header">
-                <div className="main__page__header__title">Home</div>
+                <Text className="main__page__header__title">Home</Text>
                 <Button size="s">Connect wallet</Button>
             </div>
             <div className="nfts__list">
@@ -17,7 +19,7 @@ const Main = () => {
                     <div className="nfts__list__header__seeall">See all</div>
                 </div>
                 <div className="nfts__list__body">
-                <Card style={{minWidth:"212px"}}>
+                <Card style={{minWidth:"212px"}} onClick={() => nav("/item/1")}>
                     <React.Fragment key=".0">
                         <CardChip readOnly>
                         21/50
@@ -89,10 +91,10 @@ const Main = () => {
                 </div>
             </div>
             <div className="main__page__buttons">
-                <Button size="l" before={<img src="/folder_24.svg"/>} style={{width:"100%"}}>My auctions</Button>
-                <Button size="l" before={<img src="/group_24.svg"/>} style={{width:"100%"}}>Refferals</Button>
-                <Button size="l" before={<img src="/bot_menu_24.svg"/>} style={{width:"100%"}}>Tasks</Button>
-                <Button size="l" before={<img src="/globe_24.svg"/>} mode="white" style={{width:"100%"}}>About platform</Button>
+                <Button size="l" before={<img src="/folder_24.svg"/>} style={{width:"100%"}} onClick={() => nav("/select-nft")}>My auctions</Button>
+                <Button size="l" before={<img src="/group_24.svg"/>} style={{width:"100%"}} onClick={() => nav("/create-auction")}>Refferals</Button>
+                <Button size="l" before={<img src="/bot_menu_24.svg"/>} style={{width:"100%"}} onClick={() => nav("/confirm-auction")}>Tasks</Button>
+                <Button size="l" before={<img src="/globe_24.svg"/>} mode="white" style={{width:"100%",color:"black"}}>About platform</Button>
             </div>
             
         </div>

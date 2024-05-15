@@ -16,8 +16,8 @@
 
 
 *::-webkit-scrollbar {
-  width: 4px;
-  height: 4px;
+  width: 0px;
+  height: 0px;
 }
 
 *::-webkit-scrollbar-track {
@@ -39,7 +39,6 @@
   max-width: 600px;
   margin: auto;
   min-height: 100vh;
-  background-color: #EFEFF4;
 }
 
 .main__page {
@@ -70,6 +69,21 @@
   font-size: 32px;
   font-weight: 700;
   line-height: 20px;
+}
+
+.main__page__header__title__description {
+  font-size: 17px;
+  font-weight: 510;
+  line-height: 22px;
+  letter-spacing: -0.4000000059604645px;
+  color: #00000080;
+  margin-top: 12px;
+}
+
+#main__page__header__auctionList{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
 }
 
 .nfts__list {
@@ -107,7 +121,7 @@
 
 .nfts__list__body {
   display: flex;
-  margin-left: 36px;
+  margin-left: 20px;
   align-items: center;
   gap:12px;
   overflow-x: auto;
@@ -132,7 +146,6 @@
   font-weight: 700;
   line-height: 20px;
   letter-spacing: -0.23000000417232513px;
-  color:#000000;
   margin: 0 20px;
 }
 
@@ -141,4 +154,27 @@
   display: flex;
   flex-direction: column;
   gap:12px;
+}
+
+.body__auctionList {
+  display: flex;
+  flex-direction: column;
+  gap:5px;
+  padding: 0 20px;
+  margin-top: 18px;
+}
+
+.tgui-8ca550c2fc85eff5 {
+  padding: 0px;
+}
+
+.slider__days {
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 26px;
+  letter-spacing: 0.10000000149011612px;
+  text-align: left;
+  color:#007AFF;
+  width: fit-content;
+  white-space: nowrap;
 }
